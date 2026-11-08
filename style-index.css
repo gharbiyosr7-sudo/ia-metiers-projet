@@ -600,18 +600,28 @@ footer {
     }
     .bullet-item { justify-content: center; }
 }
-/* Sécurité responsive pour éviter les débordements sur iPhone / mobile */
+/* Ajustements spécifiques pour mobile (iPhone, etc.) */
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden; /* Empêche le site de glisser horizontalement */
+    /* Empiler le logo et le menu proprement l'un au-dessus de l'autre */
+    .header-bar, .header-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px;
+        padding: 10px !important;
     }
-    img {
-        max-width: 100%; /* Empêche les images d'être trop grandes pour l'écran */
-        height: auto;
+    
+    /* Centrer les liens du menu et leur permettre de passer à la ligne si besoin */
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
     }
-    .container, .header-container {
-        padding-left: 15px;
-        padding-right: 15px;
-        box-sizing: border-box;
+
+    /* Réduire légèrement la taille du grand titre pour qu'il rentre bien en largeur */
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
     }
 }
