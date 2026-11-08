@@ -600,3 +600,18 @@ footer {
     }
     .bullet-item { justify-content: center; }
 }
+/* Sécurité responsive pour éviter les débordements sur iPhone / mobile */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Empêche le site de glisser horizontalement */
+    }
+    img {
+        max-width: 100%; /* Empêche les images d'être trop grandes pour l'écran */
+        height: auto;
+    }
+    .container, .header-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+}
