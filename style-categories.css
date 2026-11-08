@@ -741,3 +741,18 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(67, 56, 202, 0.15);
 }
+/* Sécurité responsive pour éviter les débordements sur iPhone / mobile */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Empêche le site de glisser horizontalement */
+    }
+    img {
+        max-width: 100%; /* Empêche les images d'être trop grandes pour l'écran */
+        height: auto;
+    }
+    .container, .header-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+}
